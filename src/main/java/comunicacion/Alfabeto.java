@@ -39,10 +39,14 @@ public class Alfabeto extends Pictograma{
 	
 
 	public String toString() {
-		String concatenar = null;
+		String concatenar = "";
 		
 		for(String letter: this.letras) {
-			concatenar += letter + ", ";
+			if(letter.equals("Z")) {
+				concatenar += letter;
+			}else {
+				concatenar += letter + ", ";
+			}
 		}
 		
 		return concatenar;

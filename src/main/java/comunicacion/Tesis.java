@@ -30,8 +30,8 @@ public class Tesis extends Escrito{
 		this.argumentos = args;
 	}
 	
-	public int getArgumentos(){
-		return this.argumentos.length;
+	public String[] getArgumentos(){
+		return this.argumentos;
 	}
 	
 	public void setConclusion(String conclusion ) {
@@ -59,7 +59,7 @@ public class Tesis extends Escrito{
 	}
 	
 	public int palabrasTotales(int cant) {
-		return this.getPaginas() * 5;
+		return (this.getPaginas()*cant) * 5;
 	}
 	
 	
@@ -69,7 +69,7 @@ public class Tesis extends Escrito{
 				super.getAutor() + "\n" +
 				this.getPaginas()+ "\n" +
 				this.getIdea()+ "\n" +
-				this.getArgumentos()+ "\n" +
+				this.getArgumentos().length+ "\n" +
 				this.getConclusion() + "\n" +
 				this.getReferencias() + "\n";
 	}
